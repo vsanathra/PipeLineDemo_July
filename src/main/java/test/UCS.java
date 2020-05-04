@@ -1,4 +1,4 @@
-package mytcs;
+package test;
 
 import junit.framework.Assert;
 import junit.framework.TestCase;
