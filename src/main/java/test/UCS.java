@@ -1,12 +1,48 @@
 package test;
 
-import junit.framework.Assert;
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import com.msc.calc.Calculater;
 
-public class UCS extends TestCase {
-	@Test
-	public void text()
-	{
-		Assert.assertEquals(10, 11);
-	}
+public class UCS{
+
+    static Calculater cl ;
+    
+    @BeforeClass
+      public static void setUp() {
+       cl = new Calculater();
+      }
+
+ 
+
+      @AfterClass
+      public static void tearDown()  {
+      System.gc();
+      }
+
+ 
+
+      @Test
+      public void testAdd() {
+     assertTrue(cl.doAdd(1,2)!=0);
+      }
+      
+      @Test
+      public void testSub() {
+     assertTrue(cl.doSub(1,1)==0);
+      }
+      
+      @Test
+      public void testMul() {
+     assertTrue(cl.doMul(9,2)==18);
+      }
+      
+      @Test
+      public void testDiv() {
+     assertTrue(cl.doDiv(8,2)==4);
+      }
 }
