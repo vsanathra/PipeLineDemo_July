@@ -10,39 +10,15 @@ import org.junit.Test;
 
 public class UCS{
 
-    static Calculater cl ;
-    
-    @BeforeClass
-      public static void setUp() {
-       cl = new Calculater();
-      }
-
- 
-
-      @AfterClass
-      public static void tearDown()  {
-      System.gc();
-      }
-
- 
-
       @Test
       public void testAdd() {
-     assertTrue(cl.doAdd(1,2)!=0);
+     assertTrue(false);
       }
       
       @Test
       public void testSub() {
-     assertTrue(cl.doSub(1,1)==0);
+     assertTrue(true);
       }
       
-      @Test
-      public void testMul() {
-     assertTrue(cl.doMul(9,2)==18);
-      }
       
-      @Test
-      public void testDiv() {
-     assertTrue(cl.doDiv(8,2)==4);
-      }
 }
